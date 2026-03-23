@@ -1,7 +1,11 @@
+import MainLayoutWrapper from '@/components/layout/MainLayoutWrapper';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MainLayoutWrapper>{children}</MainLayoutWrapper>
+      </body>
     </html>
   );
 }
