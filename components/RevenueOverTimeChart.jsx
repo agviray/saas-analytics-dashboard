@@ -1,3 +1,6 @@
+'use client';
+import { LineChart, Line } from 'recharts';
+
 // Temporary data for demonstration purposes
 const data = [
   {
@@ -54,6 +57,18 @@ const RevenueOverTimeChart = () => {
   return (
     <div>
       <h2>Revenue Over Time Chart</h2>
+      <div>
+        <LineChart
+          style={{
+            width: '100%',
+            maxWidth: 700,
+            height: 500,
+          }}
+          data={data}
+        >
+          <Line dataKey="revenue" />
+        </LineChart>
+      </div>
     </div>
   );
 };
