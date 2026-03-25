@@ -1,3 +1,4 @@
+import '../styles/globals.css';
 import MainLayoutWrapper from '@/components/layout/MainLayoutWrapper';
 
 export default function RootLayout({ children }) {
