@@ -1,4 +1,4 @@
-const OverViewPage = () => {
+const OverviewPage = () => {
   return (
     <div>
       <main>
@@ -9,4 +9,4 @@ const OverViewPage = () => {
   );
 };
 
-export default OverViewPage;
+export default OverviewPage;
