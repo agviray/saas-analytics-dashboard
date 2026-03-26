@@ -12,11 +12,11 @@ const data = [
     month: 'Feb',
   },
   {
-    revenue: 50000,
+    revenue: 52000,
     month: 'Mar',
   },
   {
-    revenue: 49500,
+    revenue: 49000,
     month: 'Apr',
   },
   {
@@ -40,7 +40,7 @@ const data = [
     month: 'Sep',
   },
   {
-    revenue: 64700,
+    revenue: 64000,
     month: 'Oct',
   },
   {
@@ -48,7 +48,7 @@ const data = [
     month: 'Nov',
   },
   {
-    revenue: 72100,
+    revenue: 72000,
     month: 'Dec',
   },
 ];
