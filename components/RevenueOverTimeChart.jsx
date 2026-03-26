@@ -1,23 +1,23 @@
 'use client';
-import { LineChart, Line } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 // Temporary data for demonstration purposes
 const data = [
   {
     revenue: 45000,
-    month: 'January',
+    month: 'Jan',
   },
   {
     revenue: 48000,
-    month: 'February',
+    month: 'Feb',
   },
   {
     revenue: 50000,
-    month: 'March',
+    month: 'Mar',
   },
   {
     revenue: 49500,
-    month: 'April',
+    month: 'Apr',
   },
   {
     revenue: 55000,
@@ -25,31 +25,31 @@ const data = [
   },
   {
     revenue: 58000,
-    month: 'June',
+    month: 'Jun',
   },
   {
     revenue: 54000,
-    month: 'July',
+    month: 'Jul',
   },
   {
     revenue: 61000,
-    month: 'August',
+    month: 'Aug',
   },
   {
     revenue: 59000,
-    month: 'September',
+    month: 'Sep',
   },
   {
     revenue: 64700,
-    month: 'October',
+    month: 'Oct',
   },
   {
     revenue: 68000,
-    month: 'November',
+    month: 'Nov',
   },
   {
     revenue: 72100,
-    month: 'December',
+    month: 'Dec',
   },
 ];
 
@@ -59,14 +59,25 @@ const RevenueOverTimeChart = () => {
       <h2>Revenue Over Time Chart</h2>
       <div>
         <LineChart
+          responsive
           style={{
             width: '100%',
-            maxWidth: 700,
             height: 500,
           }}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
           data={data}
         >
-          <Line dataKey="revenue" />
+          <Line
+            type="monotone"
+            stroke="#3B82F6"
+            strokeWidth="2"
+            dot={{ fill: '#3B82F6', strokeWidth: 0 }}
+            activeDot={{ fill: '#3B82F6', r: 5 }}
+            dataKey="revenue"
+          />
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis />
         </LineChart>
       </div>
     </div>
