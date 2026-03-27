@@ -1,6 +1,30 @@
 import RevenueOverTimeChart from '@/components/charts/RevenueOverTimeChart';
 import UserGrowthChart from '@/components/charts/UserGrowthChart';
 
+// Temporary KPI data for demonstration purposes
+const kpiData = [
+  {
+    label: 'Revenue',
+    value: 54321,
+    change: 10.2,
+  },
+  {
+    label: 'Active Users',
+    value: 1234,
+    change: 7.5,
+  },
+  {
+    label: 'Coversion Rate',
+    value: 4.5,
+    change: -1.2,
+  },
+  {
+    label: 'Sessions',
+    value: 17135,
+    change: 5.6,
+  },
+];
+
 // Temporary revenue over time data for demonstration purposes
 const revenueOverTimeData = [
   {
