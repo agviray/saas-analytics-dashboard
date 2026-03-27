@@ -1,5 +1,6 @@
 import RevenueOverTimeChart from '@/components/charts/RevenueOverTimeChart';
 import UserGrowthChart from '@/components/charts/UserGrowthChart';
+import KpiCard from '@/components/ui/KpiCard';
 
 // Temporary KPI data for demonstration purposes
 const kpiData = [
@@ -135,6 +136,12 @@ const OverviewPage = () => {
       <main>
         <h2>Overview Page</h2>
         <p>Welcome to the analytics overview page!</p>
+        <div>
+          <h3>Key Performance Indicators</h3>
+          {kpiData.map(({ label, value, change }) => (
+            <KpiCard key={label} label={label} value={value} change={change} />
+          ))}
+        </div>
         <div>
           <RevenueOverTimeChart data={revenueOverTimeData} />
         </div>
