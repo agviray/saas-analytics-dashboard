@@ -1,51 +1,54 @@
+'use client';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+
 // Temporary data for demonstration purposes
 const data = [
   {
-    revenue: 850,
+    users: 850,
     month: 'Jan',
   },
   {
-    revenue: 920,
+    users: 920,
     month: 'Feb',
   },
   {
-    revenue: 1050,
+    users: 1050,
     month: 'Mar',
   },
   {
-    revenue: 980,
+    users: 980,
     month: 'Apr',
   },
   {
-    revenue: 1120,
+    users: 1120,
     month: 'May',
   },
   {
-    revenue: 1250,
+    users: 1250,
     month: 'Jun',
   },
   {
-    revenue: 1180,
+    users: 1180,
     month: 'Jul',
   },
   {
-    revenue: 1340,
+    users: 1340,
     month: 'Aug',
   },
   {
-    revenue: 1290,
+    users: 1290,
     month: 'Sep',
   },
   {
-    revenue: 1420,
+    users: 1420,
     month: 'Oct',
   },
   {
-    revenue: 1510,
+    users: 1510,
     month: 'Nov',
   },
   {
-    revenue: 1620,
+    users: 1620,
     month: 'Dec',
   },
 ];
@@ -54,7 +57,20 @@ const UserGrowthChart = () => {
   return (
     <div>
       <h2>User Growth Chart</h2>
-      <div>[Chart displayed here]</div>
+      <div>
+        <BarChart
+          responsive
+          style={{ width: '100%', height: 500 }}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+          data={data}
+        >
+          <Bar dataKey="users" fill="#3B82F6" radius={5} />
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis dataKey="users" width="auto" />
+          <Tooltip contentStyle={{ borderRadius: '7px' }} />
+        </BarChart>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import RevenueOverTimeChart from '@/components/RevenueOverTimeChart';
+import UserGrowthChart from '@/components/UserGrowthChart';
 
 const OverviewPage = () => {
   return (
@@ -8,6 +9,9 @@ const OverviewPage = () => {
         <p>Welcome to the analytics overview page!</p>
         <div>
           <RevenueOverTimeChart />
+        </div>
+        <div>
+          <UserGrowthChart />
         </div>
       </main>
     </div>
