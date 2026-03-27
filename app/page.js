@@ -1,5 +1,5 @@
-import RevenueOverTimeChart from '@/components/RevenueOverTimeChart';
-import UserGrowthChart from '@/components/UserGrowthChart';
+import RevenueOverTimeChart from '@/components/charts/RevenueOverTimeChart';
+import UserGrowthChart from '@/components/charts/UserGrowthChart';
 
 const OverviewPage = () => {
   return (
