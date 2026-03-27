@@ -1,5 +1,12 @@
 'use client';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from 'recharts';
 
 // Temporary data for demonstration purposes
 const data = [
@@ -78,6 +85,7 @@ const RevenueOverTimeChart = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />
           <YAxis />
+          <Tooltip contentStyle={{ borderRadius: '7px' }} />
         </LineChart>
       </div>
     </div>
