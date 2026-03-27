@@ -8,59 +8,7 @@ import {
   Tooltip,
 } from 'recharts';
 
-// Temporary data for demonstration purposes
-const data = [
-  {
-    revenue: 45000,
-    month: 'Jan',
-  },
-  {
-    revenue: 48000,
-    month: 'Feb',
-  },
-  {
-    revenue: 52000,
-    month: 'Mar',
-  },
-  {
-    revenue: 49000,
-    month: 'Apr',
-  },
-  {
-    revenue: 55000,
-    month: 'May',
-  },
-  {
-    revenue: 58000,
-    month: 'Jun',
-  },
-  {
-    revenue: 54000,
-    month: 'Jul',
-  },
-  {
-    revenue: 61000,
-    month: 'Aug',
-  },
-  {
-    revenue: 59000,
-    month: 'Sep',
-  },
-  {
-    revenue: 64000,
-    month: 'Oct',
-  },
-  {
-    revenue: 68000,
-    month: 'Nov',
-  },
-  {
-    revenue: 72000,
-    month: 'Dec',
-  },
-];
-
-const RevenueOverTimeChart = () => {
+const RevenueOverTimeChart = ({ data }) => {
   return (
     <div>
       <h2>Revenue Over Time Chart</h2>

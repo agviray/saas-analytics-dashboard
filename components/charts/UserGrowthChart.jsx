@@ -1,59 +1,7 @@
 'use client';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
-// Temporary data for demonstration purposes
-const data = [
-  {
-    users: 850,
-    month: 'Jan',
-  },
-  {
-    users: 920,
-    month: 'Feb',
-  },
-  {
-    users: 1050,
-    month: 'Mar',
-  },
-  {
-    users: 980,
-    month: 'Apr',
-  },
-  {
-    users: 1120,
-    month: 'May',
-  },
-  {
-    users: 1250,
-    month: 'Jun',
-  },
-  {
-    users: 1180,
-    month: 'Jul',
-  },
-  {
-    users: 1340,
-    month: 'Aug',
-  },
-  {
-    users: 1290,
-    month: 'Sep',
-  },
-  {
-    users: 1420,
-    month: 'Oct',
-  },
-  {
-    users: 1510,
-    month: 'Nov',
-  },
-  {
-    users: 1620,
-    month: 'Dec',
-  },
-];
-
-const UserGrowthChart = () => {
+const UserGrowthChart = ({ data }) => {
   return (
     <div>
       <h2>User Growth Chart</h2>
