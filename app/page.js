@@ -1,26 +1,31 @@
 import RevenueOverTimeChart from '@/components/charts/RevenueOverTimeChart';
 import UserGrowthChart from '@/components/charts/UserGrowthChart';
 import KpiCard from '@/components/ui/KpiCard';
+import { type } from 'os';
 
 // Temporary KPI data for demonstration purposes
 const kpiData = [
   {
     label: 'Revenue',
+    type: 'currency',
     value: 54321,
     change: 10.2,
   },
   {
     label: 'Active Users',
+    type: 'number',
     value: 1234,
     change: 7.5,
   },
   {
     label: 'Coversion Rate',
+    type: 'percentage',
     value: 4.5,
     change: -1.2,
   },
   {
     label: 'Sessions',
+    type: 'number',
     value: 17135,
     change: 5.6,
   },
@@ -138,8 +143,14 @@ const OverviewPage = () => {
         <p>Welcome to the analytics overview page!</p>
         <div>
           <h3>Key Performance Indicators</h3>
-          {kpiData.map(({ label, value, change }) => (
-            <KpiCard key={label} label={label} value={value} change={change} />
+          {kpiData.map(({ label, type, value, change }) => (
+            <KpiCard
+              key={label}
+              label={label}
+              type={type}
+              value={value}
+              change={change}
+            />
           ))}
         </div>
         <div>
