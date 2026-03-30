@@ -20,6 +20,10 @@ const KpiCard = ({ label, type, value, change }) => {
     formatValue();
   }, []);
 
+  const positiveChange = change > 0;
+  const changeColor = positiveChange ? 'text-[#00A63E]' : 'text-[#E7000B]';
+  const changeSymbol = positiveChange ? '+' : '';
+
   return (
     <div className="flex flex-col p-[25px] items-start gap-2 self-stretch col-start-1 col-span-1 row-start-1 row-span-1 justify-self-stretch rounded-[10px] border border-gray-200 bg-white p-4 shadow-sm">
       <h3 className="flex pr-[186px] items-center self-stretch text-sm text-[#4A5565] leading-5  tracking-[-0.15px]">
@@ -29,7 +33,10 @@ const KpiCard = ({ label, type, value, change }) => {
         <span className="inline-block w-[116.125px] h-[36px] text-[#101828] text-3xl font-semibold tracking-wide">
           {formattedValue}
         </span>
-        <span className="inline-block text-[#00A63E] text-sm tracking-[-0.15px]">
+        <span
+          className={`inline-block ${changeColor} text-sm tracking-[-0.15px]`}
+        >
+          {changeSymbol}
           {change}
         </span>
       </div>
