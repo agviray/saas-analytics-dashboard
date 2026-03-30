@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { ArrowDown, ArrowUp } from 'lucide-react';
 
 const KpiCard = ({ label, type, value, change }) => {
   const [formattedValue, setFormattedValue] = useState(null);
@@ -33,12 +34,19 @@ const KpiCard = ({ label, type, value, change }) => {
         <span className="inline-block w-[116.125px] h-[36px] text-[#101828] text-3xl font-semibold tracking-wide">
           {formattedValue}
         </span>
-        <span
-          className={`inline-block ${changeColor} text-sm tracking-[-0.15px]`}
-        >
-          {changeSymbol}
-          {change}
-        </span>
+        <div className={`${changeColor} inline-flex items-end w-[69.578px] `}>
+          <div className="flex items-center gap-1">
+            {positiveChange ? (
+              <ArrowUp className="w-4 h-4" />
+            ) : (
+              <ArrowDown className="w-4 h-4" />
+            )}
+            <span className="inline-flex justify-center items-center font-medium text-sm tracking-[-0.15px]">
+              {changeSymbol}
+              {change}
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );
