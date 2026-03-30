@@ -43,7 +43,7 @@ const KpiCard = ({ label, type, value, change }) => {
             )}
             <span className="inline-flex justify-center items-center font-medium text-sm tracking-[-0.15px]">
               {changeSymbol}
-              {change}
+              {change}%
             </span>
           </div>
         </div>
