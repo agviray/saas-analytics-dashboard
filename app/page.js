@@ -1,7 +1,7 @@
 import RevenueOverTimeChart from '@/components/charts/RevenueOverTimeChart';
-import UserGrowthChart from '@/components/charts/UserGrowthChart';
 import KpiCard from '@/components/ui/KpiCard';
-import { type } from 'os';
+import UserGrowthChart from '@/components/charts/UserGrowthChart';
+import Table from '@/components/ui/Table';
 
 // Temporary KPI data for demonstration purposes
 const kpiData = [
@@ -242,6 +242,13 @@ const OverviewPage = () => {
         </div>
         <div>
           <UserGrowthChart data={userGrowthData} />
+        </div>
+        <div>
+          <h3>Recent Transactions</h3>
+          <Table
+            columns={recentTransactionsColumns}
+            data={recentTransactionsData}
+          />
         </div>
       </main>
     </div>

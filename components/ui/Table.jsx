@@ -1,29 +1,24 @@
-const Table = () => {
+const Table = ({ columns, data }) => {
+  const renderTableData = (data, columns) => {
+    return data.map((item) => (
+      <tr key={item.id}>
+        {columns.map((col) => (
+          <td key={`${item.id}-${col.key}`}>{item[col.key]}</td>
+        ))}
+      </tr>
+    ));
+  };
+
   return (
     <table>
       <thead>
-        <th>Header 1</th>
-        <th>Header 2</th>
-        <th>Header 3</th>
-        <th></th>
+        <tr>
+          {columns.map((col) => (
+            <th key={col.key}>{col.label}</th>
+          ))}
+        </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
-        </tr>
-        <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
-        </tr>
-        <tr>
-          <td>Row 3, Cell 1</td>
-          <td>Row 3, Cell 2</td>
-          <td>Row 3, Cell 3</td>
-        </tr>
-      </tbody>
+      <tbody>{renderTableData(data, columns)}</tbody>
     </table>
   );
 };
