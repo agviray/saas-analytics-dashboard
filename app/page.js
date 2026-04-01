@@ -135,6 +135,90 @@ const userGrowthData = [
   },
 ];
 
+// Temporary labels for Recent Transactions table
+const recentTransactionsColumns = [
+  {
+    key: 'id',
+    label: 'ID',
+  },
+  {
+    key: 'name',
+    label: 'NAME',
+  },
+  {
+    key: 'date',
+    label: 'DATE',
+  },
+  {
+    key: 'status',
+    label: 'STATUS',
+  },
+  {
+    key: 'amount',
+    label: 'AMOUNT',
+  },
+];
+
+// Temporary recent transactions data for demonstration purposes
+const recentTransactionsData = [
+  {
+    id: 'TXN-001',
+    name: 'John Doe',
+    date: '2026-03-18',
+    status: 'Success',
+    amount: 1250,
+  },
+  {
+    id: 'TXN-002',
+    name: 'Sarah Smith',
+    date: '2026-03-18',
+    status: 'Pending',
+    amount: 890,
+  },
+  {
+    id: 'TXN-003',
+    name: 'Michael Johnson',
+    date: '2023-03-17',
+    status: 'Success',
+    amount: 2340,
+  },
+  {
+    id: 'TXN-004',
+    name: 'Emily Davis',
+    date: '2026-03-17',
+    status: 'Failed',
+    amount: 450,
+  },
+  {
+    id: 'TXN-005',
+    name: 'David Wilson',
+    date: '2026-03-16',
+    status: 'Success',
+    amount: 3120,
+  },
+  {
+    id: 'TXN-006',
+    name: 'Jessica Brown',
+    date: '2026-03-16',
+    status: 'Pending',
+    amount: 670,
+  },
+  {
+    id: 'TXN-007',
+    name: 'Daniel Martinez',
+    date: '2026-03-15',
+    status: 'Success',
+    amount: 1890,
+  },
+  {
+    id: 'TXN-008',
+    name: 'Lisa Anderson',
+    date: '2026-03-15',
+    status: 'Success',
+    amount: 540,
+  },
+];
+
 const OverviewPage = () => {
   return (
     <div>
