@@ -243,7 +243,7 @@ const OverviewPage = () => {
         <div>
           <UserGrowthChart data={userGrowthData} />
         </div>
-        <div>
+        <div className="overflow-x-auto">
           <h3>Recent Transactions</h3>
           <Table
             columns={recentTransactionsColumns}
