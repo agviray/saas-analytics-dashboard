@@ -4,9 +4,11 @@ const badgeStyles = {
   pending: 'text-[#D08700] bg-[#FEFCE8]',
 };
 
-const Badge = ({ children }) => {
+const Badge = ({ children, theme }) => {
   return (
-    <span className="inline-block px-2 py-1 border border-0 rounded-full">
+    <span
+      className={`inline-block px-2 py-1 border border-0 rounded-full ${badgeStyles[theme.toLowerCase()]}`}
+    >
       {children}
     </span>
   );

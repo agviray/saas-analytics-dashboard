@@ -2,6 +2,7 @@ import RevenueOverTimeChart from '@/components/charts/RevenueOverTimeChart';
 import KpiCard from '@/components/ui/KpiCard';
 import UserGrowthChart from '@/components/charts/UserGrowthChart';
 import Table from '@/components/ui/Table';
+import Badge from '@/components/ui/Badge';
 
 // Temporary KPI data for demonstration purposes
 const kpiData = [
@@ -152,6 +153,7 @@ const recentTransactionsColumns = [
   {
     key: 'status',
     label: 'STATUS',
+    render: (user) => <Badge theme={user.status}>{user.status}</Badge>,
   },
   {
     key: 'amount',

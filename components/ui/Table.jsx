@@ -7,7 +7,7 @@ const Table = ({ columns, data }) => {
             key={`${item.id}-${col.key}`}
             className="px-6 py-[19.5px] text-[#101828] text-sm font-normal leading-5 tracking-[-0.15px]"
           >
-            {item[col.key]}
+            {col.render ? col.render(item) : item[col.key]}
           </td>
         ))}
       </tr>
