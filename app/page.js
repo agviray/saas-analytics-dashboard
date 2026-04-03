@@ -158,6 +158,12 @@ const recentTransactionsColumns = [
   {
     key: 'amount',
     label: 'AMOUNT',
+    render: (user) => {
+      return (user.amount = user.amount.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      }));
+    },
   },
 ];
 
