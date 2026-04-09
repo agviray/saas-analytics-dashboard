@@ -18,7 +18,7 @@ const Sidebar = () => {
         <ul className="flex flex-col gap-2 w-56">
           <li>
             <a
-              href="#"
+              href="/dashboard"
               className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
             >
               <LayoutDashboard color="#364153" />
@@ -27,7 +27,7 @@ const Sidebar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/analytics"
               className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
             >
               <ChartColumn color="#364153" />
@@ -36,7 +36,7 @@ const Sidebar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/reports"
               className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
             >
               <FileText color="#364153" />
@@ -45,7 +45,7 @@ const Sidebar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/settings"
               className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
             >
               <Settings color="#364153" />
