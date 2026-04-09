@@ -1,5 +1,5 @@
-import RevenueOverTimeChart from '@/components/charts/RevenueOverTimeChart';
 import KpiCard from '@/components/ui/KpiCard';
+import RevenueOverTimeChart from '@/components/charts/RevenueOverTimeChart';
 import UserGrowthChart from '@/components/charts/UserGrowthChart';
 import Table from '@/components/ui/Table';
 import Badge from '@/components/ui/Badge';
@@ -230,35 +230,31 @@ const recentTransactionsData = [
 const OverviewPage = () => {
   return (
     <div>
-      <main>
-        <h2>Overview Page</h2>
-        <p>Welcome to the analytics overview page!</p>
-        <div>
-          <h3>Key Performance Indicators</h3>
-          {kpiData.map(({ label, type, value, change }) => (
-            <KpiCard
-              key={label}
-              label={label}
-              type={type}
-              value={value}
-              change={change}
-            />
-          ))}
-        </div>
-        <div>
-          <RevenueOverTimeChart data={revenueOverTimeData} />
-        </div>
-        <div>
-          <UserGrowthChart data={userGrowthData} />
-        </div>
-        <div className="overflow-x-auto">
-          <h3>Recent Transactions</h3>
-          <Table
-            columns={recentTransactionsColumns}
-            data={recentTransactionsData}
+      <div>
+        <h3>Key Performance Indicators</h3>
+        {kpiData.map(({ label, type, value, change }) => (
+          <KpiCard
+            key={label}
+            label={label}
+            type={type}
+            value={value}
+            change={change}
           />
-        </div>
-      </main>
+        ))}
+      </div>
+      <div>
+        <RevenueOverTimeChart data={revenueOverTimeData} />
+      </div>
+      <div>
+        <UserGrowthChart data={userGrowthData} />
+      </div>
+      <div className="overflow-x-auto">
+        <h3>Recent Transactions</h3>
+        <Table
+          columns={recentTransactionsColumns}
+          data={recentTransactionsData}
+        />
+      </div>
     </div>
   );
 };

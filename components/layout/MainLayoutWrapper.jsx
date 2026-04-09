@@ -1,8 +1,10 @@
+import Sidebar from './Sidebar';
+
 const MainLayoutWrapper = ({ children }) => {
   return (
-    <div>
-      <h1>(MainLayoutWrapper component)</h1>
-      {children}
+    <div className="flex h-screen overflow-hidden">
+      <Sidebar />
+      <main className="flex-1 overflow-auto">{children}</main>
     </div>
   );
 };
