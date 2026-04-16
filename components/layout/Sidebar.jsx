@@ -1,4 +1,12 @@
 import { LayoutDashboard, ChartColumn, FileText, Settings } from 'lucide-react';
+
+const NAV_ITEMS = [
+  { href: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+  { href: '/analytics', icon: ChartColumn, label: 'Analytics' },
+  { href: '/reports', icon: FileText, label: 'Reports' },
+  { href: '/settings', icon: Settings, label: 'Settings' },
+];
+
 const Sidebar = () => {
   return (
     <aside className="flex flex-col gap-4 w-64 h-screen bg-white border-r border-[#E5E7EB] ">
@@ -16,42 +24,17 @@ const Sidebar = () => {
       </div>
       <nav className="flex justify-center">
         <ul className="flex flex-col gap-2 w-56">
-          <li>
-            <a
-              href="/dashboard"
-              className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
-            >
-              <LayoutDashboard color="#364153" />
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a
-              href="/analytics"
-              className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
-            >
-              <ChartColumn color="#364153" />
-              Analytics
-            </a>
-          </li>
-          <li>
-            <a
-              href="/reports"
-              className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
-            >
-              <FileText color="#364153" />
-              Reports
-            </a>
-          </li>
-          <li>
-            <a
-              href="/settings"
-              className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
-            >
-              <Settings color="#364153" />
-              Settings
-            </a>
-          </li>
+          {NAV_ITEMS.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                className="flex items-center gap-3 h-12 pl-4 text-[#364153] text-base"
+              >
+                <item.icon color="#364153" />
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </aside>
